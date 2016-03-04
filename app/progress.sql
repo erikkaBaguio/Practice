@@ -20,5 +20,5 @@ $$
 $$
  language 'plpgsql';
 
-select newuser('remarc', 'remarcbalisi', 'a', false); 
+--select newuser('remarc', 'remarcbalisi', 'a', false); 
 --select newtask(2, 'Learn Python','Need to find a good Python tutorial on the web', false); 

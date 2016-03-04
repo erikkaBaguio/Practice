@@ -27,14 +27,16 @@ def getpassword(username):
 @app.route('/', methods=['GET', 'POST'])
 def inserttask():
 
-	valueName = request.form.get('name')
-	valueUsername = request.form.get('username')
-	valuePass = request.form.get('pass')
-	done = ""
-	res = spcall("newuser", (valueName, valueUsername, valuePass, done=='true'), True)
+	if request.method == 'POST':
+		valueName = request.form.get('name')
+		valueUsername = request.form.get('username')
+		valuePass = request.form.get('pass')
+		done = ""
+		res = spcall("newuser", (valueName, valueUsername, valuePass, True), True)
+		return jsonify({'status': 'ok',})
 
-	if 'Error' in res[0][0]:
-		return jsonify({'status': 'error', 'message': res[0][0]})
+		if 'Error' in res[0][0]:
+			return jsonify({'status': 'error', 'message': res[0][0]})
 
 	return render_template('index.html')
 

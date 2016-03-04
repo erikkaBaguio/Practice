@@ -11,7 +11,7 @@ function register(){
 		success: function(resp){
 			console.log(resp.status);
 
-				$("#results").html('<p>successfully register' + valueName + '</p>');
+				$("#results").html('<p>successfully register ' + valueName + '</p>');
 
 				// $("input").val("")	
 			

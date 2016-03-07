@@ -1,7 +1,7 @@
 create table users (
    id serial8 primary key,
    name text,
-   username text,
+   username text unique,
    password text,
    done boolean
 );

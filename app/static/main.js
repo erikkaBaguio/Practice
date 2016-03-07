@@ -1,7 +1,29 @@
 function register(){
+
+	function generatePassword() {
+    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()';
+
+    console.log(random);
+
+    var generated = '';
+
+    for(var i = 0; i < 13; i++) {
+
+        var random = Math.floor((Math.random() * 73) + 1)
+        generated = generated + chars[random];
+        console.log(generated);
+    }
+
+	password = generated.toString();
+
+    return password;
+
+	}
+
 	var valueName = $('input[name="name"]').val()
 	var valueUsername = $('input[name="username"]').val()
-	var valuePass = $('input[name="password"]').val()
+	//var valuePass = $('input[name="password"]').val()
+	var valuePass = generatePassword().toString();
 	console.log(valueName, valueUsername, valuePass);
 
 	$.ajax({

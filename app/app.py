@@ -38,6 +38,10 @@ def inserttask():
 		if 'Error' in res[0][0]:
 			return jsonify({'status': 'error', 'message': res[0][0]})
 
+        # print valueName
+        # print valueUsername
+        # print valuePass
+
 	return render_template('index.html')
 
 @app.after_request

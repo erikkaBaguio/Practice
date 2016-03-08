@@ -20,10 +20,14 @@ function register(){
 
 	}
 
+	password = generatePassword().toString();
+
 	var valueName = $('input[name="name"]').val()
 	var valueUsername = $('input[name="username"]').val()
 	//var valuePass = $('input[name="password"]').val()
-	var valuePass = generatePassword().toString();
+	var valuePass = $('input[name="password"]').val()
+	//$('input[name="password"]') = password;
+	//var valuePass = generatePassword().toString();
 	console.log(valueName, valueUsername, valuePass);
 
 	$.ajax({
